@@ -17,7 +17,6 @@ public class Main {
                 .imie("Jan")
                 .nazwisko("Kowalski")
                 .build();
-
     }
 
     @AllArgsConstructor

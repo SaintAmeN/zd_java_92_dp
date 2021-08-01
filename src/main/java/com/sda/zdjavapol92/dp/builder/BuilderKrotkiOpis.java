@@ -6,6 +6,7 @@ public class BuilderKrotkiOpis {
     // A to wszystko przez polimorfizm - możemy stworzyć wiele konstruktorów...
 
     // Dla każdego wzorca
+    // Wystąpienie w java?  Streamy (po kropce dodajemy kolejny element)
     // Budowa               OK
     // Jak stworzyć?        OK
     // Jak użyć?            OK
