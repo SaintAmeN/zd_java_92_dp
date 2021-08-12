@@ -1,11 +1,13 @@
 package com.sda.zdjavapol92.dp.strategy;
 
+import com.sda.zdjavapol92.dp.observer.wersja_normalna.wiadomosc.IWiadomosc;
+import com.sda.zdjavapol92.dp.observer.wersja_normalna.nadawcy.INadawca;
+import com.sda.zdjavapol92.dp.observer.wersja_normalna.odbiorcy.IOdbiorca;
 import com.sda.zdjavapol92.dp.strategy.strategie.IStrategiaWalki;
-import com.sda.zdjavapol92.dp.strategy.strategie.StrategiaWalkiMieczem;
 
-public class Bohater {
+public class Bohater implements IOdbiorca {
     private String imie;
-    private IStrategiaWalki strategiaWalki; // domyślnie null
+    private IStrategiaWalki strategiaWalki; // domyślnie null //
 
     public Bohater(String imie) {
         this.imie = imie;
@@ -18,14 +20,19 @@ public class Bohater {
     }
 
     public void walcz() {
-        if(strategiaWalki !=null) {
+        if (strategiaWalki != null) {
             strategiaWalki.walcz();
-        }else{
+        } else {
             System.err.println("Nie ustawiłeś strategii walki!");
         }
     }
 
     public void przedstawSie() {
         System.out.println("Jestem " + imie + "...");
+    }
+
+    @Override
+    public void powiadom(INadawca nadawca, IWiadomosc wiadomosc) {
+        System.out.println("Jestem bohaterem(" + imie + "), dostałem wiadomość: " + wiadomosc);
     }
 }

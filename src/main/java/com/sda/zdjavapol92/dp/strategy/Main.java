@@ -2,6 +2,7 @@ package com.sda.zdjavapol92.dp.strategy;
 
 import com.sda.zdjavapol92.dp.strategy.strategie.StrategiaWalkiMagią;
 import com.sda.zdjavapol92.dp.strategy.strategie.StrategiaWalkiMieczem;
+import com.sda.zdjavapol92.dp.strategy.strategie.StrategiaWalkiOwcą;
 import com.sda.zdjavapol92.dp.strategy.strategie.StrategiaWalkiŁukiem;
 
 import java.util.Random;
@@ -21,6 +22,8 @@ public class Main {
                 bohater.setStrategiaWalki(new StrategiaWalkiMagią());
             } else if (losowy == 1) {
                 bohater.setStrategiaWalki(new StrategiaWalkiMieczem());
+            } else if (losowy == 2) {
+                bohater.setStrategiaWalki(new StrategiaWalkiOwcą());
             } else {
                 bohater.setStrategiaWalki(new StrategiaWalkiŁukiem());
             }
