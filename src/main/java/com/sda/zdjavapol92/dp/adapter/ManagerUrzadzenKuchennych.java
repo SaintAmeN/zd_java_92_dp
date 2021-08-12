@@ -11,6 +11,8 @@ public class ManagerUrzadzenKuchennych {
     }
 
     void setDevicesEnabled() {
+        // zamiast włączać każde urządzenie z osobna, stosujemy fasadę, czyli klasę która za nas
+        // wykonuje czynności na wielu obiektach
         for (IUrzadzenieKuchenne iUrzadzenieKuchenne : list) {
             iUrzadzenieKuchenne.setDeviceEnabled();
         }
